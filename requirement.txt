@@ -1,9 +1,0 @@
-streamlit
-pillow
-pytesseract
-scikit-learn
-xgboost
-joblib
-transformers
-torch
-pandas
