@@ -171,7 +171,7 @@ def process_document(image=None, provided_text=None):
         summary = "Text too short to summarize."
     else:
         # Adjusted max_length slightly for stability
-        res = summarizer(input_text, max_length=130, min_length=30, do_sample=False)
+        res = summarizer(input_text, max_length=130, min_length=30, do_sample=False, truncation=True)
         summary = res[0]['summary_text']
         
     return category, summary, text
