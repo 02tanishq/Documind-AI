@@ -136,9 +136,9 @@ init_db()
 @st.cache_resource
 def load_resources():
     try:
-        model = joblib.load('xgb_model.pkl')
-        vectorizer = joblib.load('tfidf_vectorizer.pkl')
-        encoder = joblib.load('label_encoder.pkl')
+        model = joblib.load('xgb_model_new.pkl')
+        vectorizer = joblib.load('tfidf_vectorizer_new.pkl')
+        encoder = joblib.load('label_encoder_new.pkl')
         summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
         return model, vectorizer, encoder, summarizer
     except Exception as e:
