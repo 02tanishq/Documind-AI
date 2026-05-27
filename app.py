@@ -137,12 +137,23 @@ init_db()
 @st.cache_resource
 def load_resources():
     try:
+        st.write("Files in directory:", os.listdir())
+
         model = joblib.load('xgb_model_new.pkl')
         vectorizer = joblib.load('tfidf_vectorizer_new.pkl')
         encoder = joblib.load('label_encoder_new.pkl')
-        summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+
+        summarizer = pipeline(
+            "summarization",
+            model="sshleifer/distilbart-cnn-12-6"
+        )
+
+        st.success("Models loaded successfully!")
+
         return model, vectorizer, encoder, summarizer
+
     except Exception as e:
+        st.error(f"MODEL LOADING ERROR: {str(e)}")
         return None, None, None, None
 
 xgb_model, tfidf_vectorizer, label_encoder, summarizer = load_resources()
