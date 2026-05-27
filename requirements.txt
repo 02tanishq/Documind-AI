@@ -3,7 +3,7 @@ pytesseract
 Pillow
 joblib
 transformers==4.41.2
-torch==2.3.0
+torch
 pandas
 xgboost
 scikit-learn
