@@ -3,7 +3,6 @@ pytesseract
 Pillow
 joblib
 transformers==4.37.2
-tokenizers==0.15.2
 torch
 pandas
 xgboost
