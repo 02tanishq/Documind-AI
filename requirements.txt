@@ -1,9 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
 streamlit==1.35.0
 pytesseract
 Pillow
 joblib
 transformers==4.37.2
-torch
 pandas
 xgboost
 scikit-learn
